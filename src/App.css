@@ -20,3 +20,22 @@
   background-color: yellow;
   flex-direction: row;
 }
+
+.my-orders{
+  display: flex;
+  background-color: honeydew;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.single-order{
+  display:flex;
+  background-color: turquoise;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-of-order{
+  display: flex;
+  flex-direction: row;
+}
