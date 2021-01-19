@@ -50,7 +50,7 @@ const showOrders = (item) => {
     return (
         <div className='div-of-order'>
             <text className='single-order' key={item.id}>{item.client} {item.price} {item.pizzaType} {item.sub}</text>
-            <Button style={{ backgroundColor: 'blue' }} onClick={()=>{
+            <Button key={item.id} style={{ backgroundColor: 'blue' }} onClick={()=>{
                 axios({
                     method:'delete',
                     url:'http://dcs-defense-project.herokuapp.com/orders/deleteOrder',
