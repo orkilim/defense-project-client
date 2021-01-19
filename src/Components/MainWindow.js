@@ -26,6 +26,7 @@ const sendToKitchen = async (pizzaType, coupon, amountAsNum, client, sub) => {
                             url: 'http://dcs-defense-project.herokuapp.com/ingredients/updateAmount',  /*'http://localhost:7500/ingredients/updateAmount',*/
                             data: {
                                 "id": pizzaType,
+                                "amount":amountAsNum
                             }
                         })
                     }
@@ -48,7 +49,7 @@ const sendToKitchen = async (pizzaType, coupon, amountAsNum, client, sub) => {
 const showOrders = (item) => {
     return (
         <div className='div-of-order'>
-            <text className='single-order' key={item.id}>{item.client} {item.price} {item.pizzaType} </text>
+            <text className='single-order' key={item.id}>{item.client} {item.price} {item.pizzaType} {item.sub}</text>
             <Button style={{ backgroundColor: 'blue' }} onClick={()=>{
                 axios({
                     method:'delete',
